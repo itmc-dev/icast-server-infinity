@@ -1,0 +1,10 @@
+version: '3'
+services:
+  icecast:
+    build: .
+    container_name: icecast-server
+    restart: always
+    ports:
+      - "4500:4500"
+    volumes:
+      - ./icecast.xml:/etc/icecast2/icecast.xml
