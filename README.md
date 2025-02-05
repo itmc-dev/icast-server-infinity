@@ -104,3 +104,7 @@ Once connected, you can listen to your stream by opening:
 👉 http://localhost:4500/stream (for local)
 
 👉 http://your-server-ip:4500/stream (for remote)
+
+docker-compose down
+docker-compose up -d
+
