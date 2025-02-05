@@ -13,7 +13,7 @@
 
     <authentication>
         <admin-user>admin</admin-user>
-        <admin-password>adminpassword</admin-password>
+        <admin-password>784365186</admin-password>
     </authentication>
 
     <hostname>0.0.0.0</hostname>
@@ -39,7 +39,7 @@
 
     <mount>
         <mount-name>/stream</mount-name>
-        <username>source</username>
-        <password>sourcepassword</password>
+        <username>userstream</username>
+        <password>536214854</password>
     </mount>
 </icecast>
