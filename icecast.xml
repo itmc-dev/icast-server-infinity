@@ -18,7 +18,7 @@
 
     <hostname>0.0.0.0</hostname>
 
-    <!-- Set the custom port (4500) -->
+    <!-- Set the custom port s(4500) -->
     <listen-socket>
         <port>4500</port>
     </listen-socket>

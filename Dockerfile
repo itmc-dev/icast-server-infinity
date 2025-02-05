@@ -29,5 +29,5 @@ USER icecast
 # Expose Icecast streaming port
 EXPOSE 4500
 
-# Start Icecast as non-root user
+# Start Icecast as non-root users
 CMD ["icecast2", "-c", "/etc/icecast2/icecast.xml"]
