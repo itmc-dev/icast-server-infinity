@@ -8,3 +8,6 @@ services:
       - "4500:4500"
     volumes:
       - ./icecast.xml:/etc/icecast2/icecast.xml
+      - ./xslt:/usr/share/icecast2/xslt
+      - ./log:/var/log/icecast2
+      - /etc/mime.types:/etc/mime.types
