@@ -39,7 +39,7 @@
 
     <mount>
         <mount-name>/stream</mount-name>
-        <username>userstream</username>
+        <username>source</username>
         <password>536214854</password>
     </mount>
 </icecast>
