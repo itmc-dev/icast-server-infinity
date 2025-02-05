@@ -113,3 +113,6 @@
 [2025-02-05  22:23:33] INFO auth/auth_shutdown Auth shutdown
 [2025-02-05  22:23:33] INFO yp/yp_shutdown YP thread down
 [2025-02-05  22:23:33] INFO stats/stats_shutdown stats thread finished
+[2025-02-05  22:29:20] INFO main/main Icecast 2.4.4 server started
+[2025-02-05  22:29:20] INFO yp/yp_update_thread YP update thread started
+[2025-02-05  22:29:20] INFO connection/get_ssl_certificate No SSL capability on any configured ports
