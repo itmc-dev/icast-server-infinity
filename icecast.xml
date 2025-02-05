@@ -18,6 +18,9 @@
 
     <hostname>0.0.0.0</hostname>
 
+    <location>Earth</location>
+    <admin>icemaster@localhost</admin>
+
     <!-- Set the custom port (4500) -->
     <listen-socket>
         <port>4500</port>
