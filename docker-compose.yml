@@ -1,4 +1,5 @@
-version: '3'
+version: '3.9'
+
 services:
   icecast:
     build: .
@@ -7,8 +8,9 @@ services:
     ports:
       - "4500:4500"
     volumes:
-      - ./icecast.xml:/etc/icecast2/icecast.xml
-      - ./xslt:/usr/share/icecast2/xslt
-      - ./log:/var/log/icecast2
-      - /etc/mime.types:/etc/mime.types
-    user: icecast
+      - ./icecast.xml:/etc/icecast2/icecast.xml  # Configuration file
+      - ./xslt:/usr/share/icecast2/xslt         # XSLT directory for styling
+      - ./log:/var/log/icecast2                 # Persistent log directory
+      - /etc/mime.types:/etc/mime.types         # MIME types
+
+    user: "10001:10001"  # Match UID/GID as defined in the Dockerfile

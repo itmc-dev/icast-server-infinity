@@ -1,34 +1,34 @@
-# Use Debian as base
+# Use Debian as the base image
 FROM debian:latest
 
-# Install Icecast2 + XSLT dependencies
-RUN apt-get update && apt-get install -y icecast2 xsltproc && rm -rf /var/lib/apt/lists/*
+# Install Icecast2 and XSLT dependencies
+RUN apt-get update && apt-get install -y \
+    icecast2 \
+    xsltproc \
+    && rm -rf /var/lib/apt/lists/*
 
-# Ensure 'icecast' group exists
-RUN getent group icecast || groupadd -r icecast
+# Ensure the icecast group exists by creating it only if it doesn't already exist
+RUN getent group icecast || groupadd -g 10001 icecast \
+    && id -u icecast >/dev/null 2>&1 || useradd -m -u 10001 -g icecast icecast
 
-# Create a non-root user if missing
-RUN id icecast 2>/dev/null || useradd -r -g icecast icecast
+# Create directories for logs, config, and other Icecast resources
+RUN mkdir -p /var/log/icecast2 /usr/share/icecast2/xslt /etc/icecast2 \
+    && chown -R icecast:icecast /var/log/icecast2 /usr/share/icecast2 /etc/icecast2
 
-# Create necessary directories for Icecast logs and web admin
-RUN mkdir -p /usr/local/icecast/logs && chown -R icecast:icecast /usr/local/icecast/logs
-RUN mkdir -p /usr/share/icecast && chown -R icecast:icecast /usr/share/icecast
-RUN mkdir -p /var/log/icecast2 && chown -R icecast:icecast /var/log/icecast2
-
-# Set working directory
+# Set the working directory to Icecast's configuration directory
 WORKDIR /etc/icecast2
 
-# Copy the Icecast configuration
+# Copy the Icecast configuration into the container
 COPY icecast.xml /etc/icecast2/icecast.xml
 
-# Ensure the Icecast user owns all files
-RUN chown -R icecast:icecast /etc/icecast2 /usr/local/icecast/logs /usr/share/icecast /var/log/icecast2
+# Ensure all files and directories are owned by the Icecast user
+RUN chown -R icecast:icecast /etc/icecast2 /var/log/icecast2 /usr/share/icecast2
 
-# Switch to non-root user
+# Run the container as the non-root user "icecast"
 USER icecast
 
-# Expose Icecast streaming port
+# Expose the Icecast streaming port (4500)
 EXPOSE 4500
 
-# Start Icecast as non-root user
+# Default command to start Icecast with the custom configuration
 CMD ["icecast2", "-c", "/etc/icecast2/icecast.xml"]
