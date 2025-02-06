@@ -9,3 +9,25 @@
 [2025-02-05  22:45:34] INFO auth/auth_shutdown Auth shutdown
 [2025-02-05  22:45:34] INFO yp/yp_shutdown YP thread down
 [2025-02-05  22:45:35] INFO stats/stats_shutdown stats thread finished
+[2025-02-05  23:32:40] INFO main/main Icecast 2.4.4 server started
+[2025-02-05  23:32:40] INFO yp/yp_update_thread YP update thread started
+[2025-02-05  23:32:40] INFO connection/get_ssl_certificate No SSL capability on any configured ports
+[2025-02-05  23:33:24] INFO main/_server_proc Caught halt request, shutting down...
+[2025-02-05  23:33:24] INFO main/main Shutting down
+[2025-02-05  23:33:24] INFO fserve/fserve_shutdown file serving stopped
+[2025-02-05  23:33:25] INFO slave/_slave_thread shutting down current relays
+[2025-02-05  23:33:25] INFO slave/_slave_thread Slave thread shutdown complete
+[2025-02-05  23:33:25] INFO auth/auth_shutdown Auth shutdown
+[2025-02-05  23:33:25] INFO yp/yp_shutdown YP thread down
+[2025-02-05  23:33:26] INFO stats/stats_shutdown stats thread finished
+[2025-02-05  23:33:35] INFO main/main Icecast 2.4.4 server started
+[2025-02-05  23:33:35] INFO yp/yp_update_thread YP update thread started
+[2025-02-05  23:33:35] INFO connection/get_ssl_certificate No SSL capability on any configured ports
+[2025-02-06  13:40:40] INFO main/_server_proc Caught halt request, shutting down...
+[2025-02-06  13:40:40] INFO main/main Shutting down
+[2025-02-06  13:40:40] INFO fserve/fserve_shutdown file serving stopped
+[2025-02-06  13:40:40] INFO slave/_slave_thread shutting down current relays
+[2025-02-06  13:40:40] INFO slave/_slave_thread Slave thread shutdown complete
+[2025-02-06  13:40:40] INFO auth/auth_shutdown Auth shutdown
+[2025-02-06  13:40:41] INFO yp/yp_shutdown YP thread down
+[2025-02-06  13:40:41] INFO stats/stats_shutdown stats thread finished

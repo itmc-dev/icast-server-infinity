@@ -11,3 +11,4 @@ services:
       - ./xslt:/usr/share/icecast2/xslt
       - ./log:/var/log/icecast2
       - /etc/mime.types:/etc/mime.types
+    user: icecast
