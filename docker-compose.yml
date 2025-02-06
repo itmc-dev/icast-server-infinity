@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  icecast:
+    build: .
+    container_name: icecast_server
+    ports:
+      - "4500:8000" # Exposing Icecast on port 4500
+    volumes:
+      - ./icecast.xml:/etc/icecast.xml
+    restart: unless-stopped
